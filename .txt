@@ -1,0 +1,30 @@
+Name of Student: Sammai Gutierrez
+
+Name of Project: The Right Recipe 
+
+Project's Purpose or Goal: (What will it do for users?) An app that generates recipes based on what's on the user's fridge or specific ingredients.
+
+List the absolute minimum features the project requires to meet this purpose or goal:
+
+Parse spoonacular API Json object 
+User Authentication
+CRUD for user's favorites.  Allow the user to sign in and be able to store "its favorite recipes".
+
+What tools, frameworks, libraries, APIs, modules and/or other resources (whatever is specific to your track, and your language) will you use to create this MVP? List them all here. Be specific.
+
+Spoonacular API to generate the recipes based on the user's ingredients.
+Either JS/React or C#/.Net core 
+HTML, CSS, Bootstrap
+
+If you finish developing the minimum viable product (MVP) with time to spare, what will you work on next? Describe these features here: Be specific.
+
+Allow the user to choose to never show a certain recipe in case they didn't like it. 
+Have the app populate a list of the remaining igredients that the user still needs.
+Keep track of the user recipes history and generate a graph that shows the nutreints they have been consuming weekly.- maybe suggest recipes based on the nutrients they are lacking.
+The user can enter the zip code as well as the number of miles they are willing to shop at, and the app should calculate the cheapest store to buy at to accomplish their recipe. 
+
+What additional tools, frameworks, libraries, APIs, or other resources will these additional features require?
+
+Try to generate a graph possibly with https://d3js.org/ 
+Search nearby grocers with https://www.storemapper.com/support/knowledge-base/using-search-api-endpoint/ OR https://developers.google.com/maps/documentation/places/web-service/search
+Not sure which database i'll use to store the user's history, it'll depend on what I learn next with react. For now, mySQL
