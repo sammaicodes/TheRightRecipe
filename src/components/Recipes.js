@@ -6,7 +6,7 @@ class Recipes extends React.Component {
     this.state = {
       error: null,
       isLoaded: false,
-      ingredients: []
+      desiredIngredients: []
     };
   }
 
@@ -17,7 +17,7 @@ class Recipes extends React.Component {
         (jsonifiedResponse) => {
           this.setState({
             isLoaded: true,
-            ingredients: jsonifiedResponse.recipes
+            desiredRecipe: jsonifiedResponse[0]
           });
         })
         .catch((error) => {
@@ -33,7 +33,7 @@ class Recipes extends React.Component {
   }
 
   render() {
-    const { error, isLoaded, ingredients } = this.state;
+    const { error, isLoaded, desiredRecipe } = this.state;
     if (error) {
       return <React.Fragment>Error: {error.message}</React.Fragment>;
     } else if (!isLoaded) {
@@ -43,7 +43,7 @@ class Recipes extends React.Component {
         <React.Fragment>
           <h1>Recipes</h1>
           <ul>
-            {ingredients.map((recipes, index) =>
+            {desiredRecipe.map((recipes, index) =>
               <li key={index}>
                 <h3>{recipes.title}</h3>
                 <p>{recipes.usedIngredients}</p>
