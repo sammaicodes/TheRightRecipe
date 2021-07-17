@@ -15,6 +15,7 @@
 * _create-react-app_
 * _www.draw.io_
 * _JSX_
+* _charts.js_
 
 ## Overview
 
