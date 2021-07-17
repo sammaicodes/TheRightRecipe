@@ -6,7 +6,7 @@ class Recipes extends React.Component {
     this.state = {
       error: null,
       isLoaded: false,
-      desiredIngredients: []
+      desiredRecipe: []
     };
   }
 
@@ -46,7 +46,7 @@ class Recipes extends React.Component {
             {desiredRecipe.map((recipes, index) =>
               <li key={index}>
                 <h3>{recipes.title}</h3>
-                <p>{recipes.usedIngredients}</p>
+                {/* <p>{recipes.usedIngredients[0].image}</p> */}
               </li>
             )}
           </ul>
