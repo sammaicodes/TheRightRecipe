@@ -1,6 +1,6 @@
 import React from 'react';
 
-class Recipes extends React.Component {
+class Dinner extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -11,21 +11,21 @@ class Recipes extends React.Component {
   }
 
   makeApiCall = () => {
-    fetch(`https://api.spoonacular.com/recipes/findByIngredients?api-key=${process.env.REACT_APP_API_KEY}&ingredients=apples,+flour,+sugar&number=2`)
+    fetch(`https://api.spoonacular.com/recipes/findByIngredients?apiKey=${process.env.REACT_APP_API_KEY}&ingredients=apples,+flour,+sugar&number=2`)
       .then(response => response.json())
       .then(
         (jsonifiedResponse) => {
           this.setState({
             isLoaded: true,
-            desiredRecipe: jsonifiedResponse[0]
+            desiredRecipe: jsonifiedResponse
           });
         })
-        .catch((error) => {
-          this.setState({
-            isLoaded: true,
-            error
-          });
+      .catch((error) => {
+        this.setState({
+          isLoaded: true,
+          error
         });
+      });
   }
 
   componentDidMount() {
@@ -42,18 +42,22 @@ class Recipes extends React.Component {
       return (
         <React.Fragment>
           <h1>Recipes</h1>
-          <ul>
+
+          <h3>{desiredRecipe[0].title}</h3>
+
+           {/* <ul>
             {desiredRecipe.map((recipes, index) =>
               <li key={index}>
-                <h3>{recipes.title}</h3>
-                {/* <p>{recipes.usedIngredients[0].image}</p> */}
+                <h3>{recipes[0].title}</h3>
+                 <p>{recipes.usedIngredients}</p> 
               </li>
             )}
-          </ul>
+           </ul>  */}
+
         </React.Fragment>
       );
     }
   }
 }
 
-export default Recipes;
+export default Dinner;

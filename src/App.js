@@ -1,10 +1,11 @@
 import React from 'react';
 import './App.css';
-import Recipes from './components/Recipes';
+import Recipes from './components/Dinner';
 
 function App() {
   return (
     <React.Fragment>
+      
       < Recipes />
     </React.Fragment>
   );
