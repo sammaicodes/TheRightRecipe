@@ -13,7 +13,7 @@ CRUD for user's favorites.  Allow the user to sign in and be able to store "its 
 What tools, frameworks, libraries, APIs, modules and/or other resources (whatever is specific to your track, and your language) will you use to create this MVP? List them all here. Be specific.
 
 Spoonacular API to generate the recipes based on the user's ingredients.
-Either JS/React or C#/.Net core 
+Either JS/React
 HTML, CSS, Bootstrap
 
 If you finish developing the minimum viable product (MVP) with time to spare, what will you work on next? Describe these features here: Be specific.
@@ -27,4 +27,4 @@ What additional tools, frameworks, libraries, APIs, or other resources will thes
 
 Try to generate a graph possibly with https://d3js.org/ 
 Search nearby grocers with https://www.storemapper.com/support/knowledge-base/using-search-api-endpoint/ OR https://developers.google.com/maps/documentation/places/web-service/search
-Not sure which database i'll use to store the user's history, it'll depend on what I learn next with react. For now, mySQL
+Will use noSQL database (firebase) i'll use to store the user's history. 

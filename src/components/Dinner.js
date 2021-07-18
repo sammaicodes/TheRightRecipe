@@ -44,6 +44,10 @@ class Dinner extends React.Component {
           <h1>Recipes</h1>
 
           <h3>{desiredRecipe[0].title}</h3>
+          <h3>{desiredRecipe[0].title}</h3>
+          <h3>{desiredRecipe[0].usedIngredients[0].image}</h3>
+
+  
 
            {/* <ul>
             {desiredRecipe.map((recipes, index) =>
