@@ -3,7 +3,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React, { useState } from 'react';
 import SearchResults from './SearchResults';
-import RandomResults from './RandomResults';
 import Axios from "axios";
 import "../App.css"
 
@@ -64,16 +63,16 @@ function Main({ randomRecipes }) {
         <input type='submit' value='Search' className='submitStyle'/>
       </form>
 
-      <div>
+      <div className="grid">
         {recipes !== []
                     && recipes.map(recipe => {
                       return <SearchResults recipe={recipe}/>
                     })}
       </div>
-      <div>
+      <div className="grid">
         {randomRecipes !== []
               && randomRecipes.map(recipe => {
-                return <RandomResults recipe={recipe}/>
+                return <SearchResults recipe={recipe}/>
         })}
       </div>
     </div>
