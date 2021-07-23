@@ -10,9 +10,11 @@ import { v4 as uuidv4 } from "uuid"
 function Main({ randomRecipes }) {
   const [query, setQuery] = useState(``)
   const [query2, setQuery2] = useState(``)
+  const [query3, setQuery3] = useState(``)
+  const [query4, setQuery4] = useState(``)
   const [recipes, setrecipes] = useState([])
   /* eslint-disable max-len */
-  const url = `https://api.edamam.com/api/recipes/v2?type=public&q=${query}%26${query2}&app_id=${process.env.REACT_APP_EDAMAM_API_ID}&app_key=${process.env.REACT_APP_EDAMAM_API_KEY}&field=label&field=image&field=url&field=ingredientLines&field=totalNutrients`
+  const url = `https://api.edamam.com/api/recipes/v2?type=public&q=${query}%26${query2}%26${query3}%26${query4}&app_id=${process.env.REACT_APP_EDAMAM_API_ID}&app_key=${process.env.REACT_APP_EDAMAM_API_KEY}&field=label&field=image&field=url&field=ingredientLines&field=totalNutrients`
   /* eslint-enable max-len */
 
   const getRecipe = async () => {
@@ -28,18 +30,35 @@ function Main({ randomRecipes }) {
 
   return (
     <div>
-      <form onSubmit={onSubmit}>
+      <p>Enter ingredients on hand or a combination of dish name, ingredients, and/or health label (e.g. vegan): </p>
+      <form onSubmit={onSubmit} className="formStyle">
         <input
           type='text'
-          placeholder='Ingredient 1'
+          placeholder='e.g. Pizza or Basil'
           value={query}
           onChange={e => setQuery(e.target.value)}
+          className="inputStyle"
         />
         <input
           type='text'
-          placeholder='Ingredient 2'
+          placeholder='e.g. Tomato'
           value={query2}
           onChange={e => setQuery2(e.target.value)}
+          className="inputStyle"
+        />
+        <input
+          type='text'
+          placeholder='e.g. Pineapple'
+          value={query3}
+          onChange={e => setQuery3(e.target.value)}
+          className="inputStyle"
+        />
+         <input
+          type='text'
+          placeholder='e.g. Chicken or Vegan'
+          value={query4}
+          onChange={e => setQuery4(e.target.value)}
+          className="inputStyle"
         />
 
         <input type='submit' value='Search' />

@@ -3,30 +3,30 @@ import React from 'react'
 import "../App.css"
 
 function Header({ getRandom }) {
+
+    const onReload = e => {
+        e.preventDefault()
+        window.location.reload()
+      }
+
   return (
     <>
       <div>
-        <p>Home</p>
+      <button type='button' onClick={onReload}>Home</button>
+        {/* <p>Home</p> */}
       </div>
       <div>
-        <p>Favorites</p>
+          <button type='button' >Favorites</button>
+        {/* <p>Favorites</p> */}
       </div>
       <div>
         {/* <p onClick={getRandom}> Random Recipe</p> */}
-        <button
-          type='button'
-          style={{
-            border: `none`,
-            background: `none`,
-            outline: `none`,
-            fontSize: ``,
-          }}
-          onClick={getRandom}
-        >Random Recipe</button>
+        <button type='button' onClick={getRandom}> Random Recipe</button>
 
       </div>
       <div>
-        <p>LogIn</p>
+        <button>LogIn</button>
+        {/* <p>LogIn</p> */}
       </div>
       <h1>The Right Recipe</h1>
     </>
