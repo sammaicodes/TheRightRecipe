@@ -17,6 +17,7 @@ body {
   min-width: 200px;
   max-width: 100vw;
   font-size: 15px;
+  margin-left: 6px;
 }
 button{
   font-family: 'Indie Flower', cursive;
@@ -25,7 +26,14 @@ button{
   outline: none;
   font-size: 20px;
 }
-
+.submitStyle{
+  padding: 9px 17px;
+  font-size: 15px;
+  margin-left: 6px;
+  background-color: #04AA6D;
+  color: #ffffff;
+  border: none;
+}
 
 
 .App {

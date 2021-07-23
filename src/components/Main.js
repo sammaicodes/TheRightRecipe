@@ -61,7 +61,7 @@ function Main({ randomRecipes }) {
           className="inputStyle"
         />
 
-        <input type='submit' value='Search' />
+        <input type='submit' value='Search' className='submitStyle'/>
       </form>
 
       <div>
