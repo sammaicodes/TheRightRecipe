@@ -16,6 +16,9 @@
 * _www.draw.io_
 * _JSX_
 * _charts.js_
+* _Axios_
+* _React Hooks_
+
 
 ## Overview
 
@@ -35,8 +38,19 @@ _This project attempts to let the user create a list of ingredients and an API c
     * _Navigate to the Project folder and run the command `$npm start`
     * _Visit the app via the browser: 'localhost:3000/'_
 
+## Project Time Tracking
+
+| Date      | Task |  Time Taken    |
+| ----------- | ----------- | ----------- |
+| Fri. July 16 | See commit history - mostly read api documentation and tested it in postman | 8 hrs |
+| Thurs. July 22 | Implemented API & Axios | 2 hrs
+| Thurs. July 22 | Implemented Hooks | 1 hr
+| Thurs. July 22 | Added user input & clickable images | 1hr
+
+
+
 ## Component Diagram
-  ![Diagram](/tapDiagram.PNG)
+
 
 ## Known Bugs
 
