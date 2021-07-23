@@ -1,11 +1,11 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/alt-text */
-import React, { useState } from 'react'
-
-import Axios from "axios"
+import React, { useState } from 'react';
+import SearchResults from './SearchResults';
+import RandomResults from './RandomResults';
+import Axios from "axios";
 import "../App.css"
-import { v4 as uuidv4 } from "uuid"
 
 function Main({ randomRecipes }) {
   const [query, setQuery] = useState(``)
@@ -66,34 +66,15 @@ function Main({ randomRecipes }) {
 
       <div>
         {recipes !== []
-                    && recipes.map(recipe => (
-                      recipe.recipe.image.match(/\.(jpeg|jpg|gif|png)$/) != null
-                            && (
-                              <div
-                                className='recipeTile'
-                                onClick={() => window.open(recipe.recipe.url)}
-                              >
-                                <img className='recipeTile__img' src={recipe.recipe.image} />
-                                <p className='recipeTile__name' key={uuidv4()}>
-                                  {recipe.recipe.label}
-                                </p>
-                              </div>
-                            )
-                    ))}
+                    && recipes.map(recipe => {
+                      return <SearchResults recipe={recipe}/>
+                    })}
       </div>
       <div>
         {randomRecipes !== []
-              && randomRecipes.map(recipe => (
-                recipe.recipe.image.match(/\.(jpeg|jpg|gif|png)$/) != null
-                      && (
-                        <div onClick={() => window.open(recipe.recipe.url)}>
-                          <img src={recipe.recipe.image} />
-                          <p key={uuidv4()}>
-                            {recipe.recipe.label}
-                          </p>
-                        </div>
-                      )
-              ))}
+              && randomRecipes.map(recipe => {
+                return <RandomResults recipe={recipe}/>
+        })}
       </div>
     </div>
   )
