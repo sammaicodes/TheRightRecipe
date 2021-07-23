@@ -30,7 +30,7 @@ function Main({ randomRecipes }) {
 
   return (
     <div>
-      <p>Enter ingredients on hand or a combination of dish name, ingredients, and/or health label (e.g. vegan): </p>
+      <p className="instructions">Enter ingredients on hand or a combination of dish name, ingredients, and/or health label (e.g. vegan): </p>
       <form onSubmit={onSubmit} className="formStyle">
         <input
           type='text'
