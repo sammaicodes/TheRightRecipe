@@ -15,9 +15,8 @@ export default function SearchResults({ recipe }) {
                 <p className='recipeLabels' key={uuidv4()}>
                     {recipe.recipe.label}
                 </p>
-        
 
-                    <p>{recipe.recipe.ingredientLines}</p>
+                    {/* <p>{recipe.recipe.totalNutrients}</p> */}
         
                 <div className="icons">
                     <div>
