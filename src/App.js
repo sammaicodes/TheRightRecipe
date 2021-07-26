@@ -3,6 +3,7 @@ import './App.css'
 import Axios from "axios"
 import Header from './components/Header'
 import Main from './components/Main'
+import NutrientsChart from './components/NutrientsChart'
 
 function App() {
   const [randomRecipes, setRandomRecipes] = useState([])
@@ -19,6 +20,7 @@ function App() {
     <>
       <Header getRandom={getRandom} />
       <Main randomRecipes={randomRecipes} />
+      <NutrientsChart/>
 
     </>
   )
