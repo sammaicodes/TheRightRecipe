@@ -19,7 +19,7 @@ function Main({ randomRecipes }) {
   const getRecipe = async () => {
     const result = await Axios.get(url)
     setrecipes(result.data.hits)
-    console.log(result)
+    console.log(result.data.hits)
   }
 
   const onSubmit = e => {

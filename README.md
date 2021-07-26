@@ -46,6 +46,7 @@ _This project attempts to let the user create a list of ingredients and an API c
 | Thurs. July 22 | Implemented API & Axios | 2 hrs
 | Thurs. July 22 | Implemented Hooks | 1 hr
 | Thurs. July 22 | Added user input & clickable images | 1hr
+| Fri. July 23 | Worked on styling,added futures, and trouble shooting | 8hrs
 
 
 
