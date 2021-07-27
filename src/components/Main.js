@@ -12,6 +12,9 @@ function Main({ randomRecipes }) {
   const [query3, setQuery3] = useState(``)
   const [query4, setQuery4] = useState(``)
   const [recipes, setrecipes] = useState([])
+  // Have a new state hook here that keeps track of the selected recipe's nutritional facts. 
+  // Default is null.Then have some method that sets this state to be eqaul to the infomration that you want to display. 
+  // Then send that information down as a prop when this state != null. You would render the NutrientsChart.js conditionally depending on if this is !null. 
   /* eslint-disable max-len */
   const url = `https://api.edamam.com/api/recipes/v2?type=public&q=${query}%26${query2}%26${query3}%26${query4}&app_id=${process.env.REACT_APP_EDAMAM_API_ID}&app_key=${process.env.REACT_APP_EDAMAM_API_KEY}&field=label&field=image&field=url&field=ingredientLines&field=totalNutrients`
   /* eslint-enable max-len */
@@ -26,6 +29,10 @@ function Main({ randomRecipes }) {
     e.preventDefault()
     getRecipe()
   }
+    
+  // handleDisplayNutition = (activeRecipe) => { set the state of the current active recipe -- set that state to an object containing the entire recipe (which is the parameter) }
+    
+    // handleHideNutrition = () => { just clears that state to be null }
 
   return (
     <div>
@@ -63,10 +70,12 @@ function Main({ randomRecipes }) {
         <input type='submit' value='Search' className='submitStyle'/>
       </form>
 
+{/* if (selectedRecipe != null) { <NutritionChart chartInfo = {currentlyActiveNutirion (the state that we set above)} } */}
       <div className="grid">
         {recipes !== []
                     && recipes.map(recipe => {
-                      return <SearchResults recipe={recipe}/>
+                      return <SearchResults recipe={recipe} />
+                      // Send as a prop that method above to set the currently active nutirion, then call it when you click on taht button (and pass the current recipe object as the argument)
                     })}
       </div>
       <div className="grid">
