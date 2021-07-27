@@ -20,7 +20,7 @@ function App() {
     <>
       <Header getRandom={getRandom} />
       <Main randomRecipes={randomRecipes} />
-      <NutrientsChart/>
+      {/* <NutrientsChart/> */}
 
     </>
   )

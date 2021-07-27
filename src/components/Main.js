@@ -3,10 +3,12 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React, { useState } from 'react';
 import SearchResults from './SearchResults';
+import NutrientsChart from './components/NutrientsChart'
 import Axios from "axios";
 import "../App.css"
+import { Chart } from 'react-chartjs-2';
 
-function Main({ randomRecipes }) {
+function Main({ randomRecipes, chart }) {
   const [query, setQuery] = useState(``)
   const [query2, setQuery2] = useState(``)
   const [query3, setQuery3] = useState(``)
@@ -28,6 +30,11 @@ function Main({ randomRecipes }) {
   const onSubmit = e => {
     e.preventDefault()
     getRecipe()
+  }
+
+  const onGraphSelect = e => {
+    e.preventDefault()
+    chart()
   }
     
   // handleDisplayNutition = (activeRecipe) => { set the state of the current active recipe -- set that state to an object containing the entire recipe (which is the parameter) }
@@ -74,7 +81,13 @@ function Main({ randomRecipes }) {
       <div className="grid">
         {recipes !== []
                     && recipes.map(recipe => {
-                      return <SearchResults recipe={recipe} />
+                      return (
+                        <>
+                      <SearchResults recipe={recipe} onGraphSelect={onGraphSelect}/> 
+                      <NutrientsChart recipe={recipe} />
+                      </>
+                      ) 
+                      
                       // Send as a prop that method above to set the currently active nutirion, then call it when you click on taht button (and pass the current recipe object as the argument)
                     })}
       </div>

@@ -3,11 +3,13 @@ import { v4 as uuidv4 } from "uuid";
 import "../App.css";
 import graphSym from "./../images/graphSymbol.JPG";
 import starSym from "./../images/star.jpg"
+import NutrientsChart from './components/NutrientsChart'
 
 
-export default function SearchResults({ recipe }) {
+export default function SearchResults({ recipe, onGraphSelect, setChartData }) {
 
     return(
+        
         recipe.recipe.image.match(/\.(jpeg|jpg|gif|png)$/) != null && (
             <div className='imageGrid'  >
                 
@@ -16,10 +18,10 @@ export default function SearchResults({ recipe }) {
                     {recipe.recipe.label}
                 </p>
 
-                    {/* <p>{recipe.recipe.totalNutrients}</p> */}
+                    <p>{recipe.recipe.totalNutrients.FAT.quantity}</p>
         
                 <div className="icons">
-                    <div>
+                    <div onClick={() => setChartData({onGraphSelect})}>
                         <img className="graphIcon" src={graphSym}></img>
                 
                     </div>

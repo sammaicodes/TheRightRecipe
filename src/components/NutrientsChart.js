@@ -1,7 +1,6 @@
 import React, { useState, useEffect} from 'react'
 
 import {Pie} from "react-chartjs-2"
-import axios from "axios"
 
 const NutrientsChart = ({ recipe }) => { // props instead
 
@@ -13,7 +12,7 @@ const NutrientsChart = ({ recipe }) => { // props instead
       datasets: [
         {
           label: 'Nutrient Content',
-          data: [recipe.recipe.ENERC_KCAL.quantity, recipe.recipe.FAT.quantity, recipe.recipe.CHOCDF.quantity, recipe.recipe.SUGAR.quantity, recipe.recipe.PROCNT.quantity], // props.recipe.ENERC_KCAL.quantity
+          data: [recipe.recipe.totalNutrients.ENERC_KCAL.quantity, recipe.recipe.totalNutrients.FAT.quantity, recipe.recipe.totalNutrients.CHOCDF.quantity, recipe.recipe.totalNutrients.SUGAR.quantity, recipe.recipe.totalNutrients.PROCNT.quantity], // props.recipe.ENERC_KCAL.quantity
           backgroundColor: [
             `rgba(75, 192, 192, 0.6)`,
             `	#FF0000`,
@@ -32,7 +31,7 @@ const NutrientsChart = ({ recipe }) => { // props instead
 
   return (
     <>
-      <div style={{ height: "500px", width: "500px" }}>
+      <div style={{ height: "100px", width: "100px" }}>
         {/* z-index of something highter than 0, and then center it somehow, and position absolute */}
         {/* make a close out x-button that takes that other method to clear that state */}
       <Pie data={chartData}/>
