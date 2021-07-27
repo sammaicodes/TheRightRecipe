@@ -6,6 +6,7 @@ const NutrientsChart = ({ recipe }) => {
 
   const [chartData, setChartData] = useState({})
 
+
   const chart = () => {
     setChartData({
       labels: [`Energy [kcal]`, `FAT [g]`, `Carbs [g]`, `Sugar [g]`, `Protein [g]`],

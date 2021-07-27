@@ -10,6 +10,7 @@ import {Pie} from "react-chartjs-2"
 export default function SearchResults({ recipe }) {
 
     const [chartData, setChartData] = useState({})
+    const [show, setShow] = useState(false)
 
     const chart = () => {
       setChartData({
@@ -49,10 +50,12 @@ export default function SearchResults({ recipe }) {
         
                 <div className="icons">
                     <div>
-                        <img className="graphIcon" src={graphSym}></img>
-                        <div style={{ height: "300px", width: "300px" }}>
+                        <img className="graphIcon" src={graphSym} onClick={()=>setShow(!show)}></img>
+                        {
+                        show?<div style={{ height: "300px", width: "300px" }}>
                         <Pie data={chartData}/>
-                        </div>
+                        </div>:null
+                        }
                     </div>
                     <div>
                         <img className="graphIcon" src={starSym}></img>
