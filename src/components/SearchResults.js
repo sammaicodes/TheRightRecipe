@@ -1,12 +1,18 @@
 import React  from 'react'
+import { Chart } from 'react-chartjs-2';
 import { v4 as uuidv4 } from "uuid";
 import "../App.css";
 import graphSym from "./../images/graphSymbol.JPG";
 import starSym from "./../images/star.jpg"
+import NutrientsChart from './components/NutrientsChart'
 
 
+export default function SearchResults({ recipe, chart() }) {
 
-export default function SearchResults({ recipe }) {
+    const onClickableChart = e => {
+        e.preventDefault();
+        chart();
+      }
     return(
         recipe.recipe.image.match(/\.(jpeg|jpg|gif|png)$/) != null && (
             <div className='imageGrid'  >
@@ -20,7 +26,8 @@ export default function SearchResults({ recipe }) {
         
                 <div className="icons">
                     <div>
-                        <img className="graphIcon" src={graphSym}></img>
+                        <img className="graphIcon" src={graphSym} onClick={onClickableChart}></img>
+                        <NutrientsChart recipe={recipe}/>
                     </div>
                     <div>
                         <img className="graphIcon" src={starSym}></img>
