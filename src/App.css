@@ -111,6 +111,14 @@ position: absolute;
 z-index: 1;
 background-color: white;
 }
+.hoverOver:hover{
+  background-color: #e0f4d0;
+  cursor: pointer;
+}
+.x-btn:hover{
+  background-color: #e0f4d0;
+  cursor: pointer;
+}
 /* #x-btn::after {
     content: 'x';
     color: #fff;

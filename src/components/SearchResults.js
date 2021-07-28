@@ -53,7 +53,7 @@ export default function SearchResults({ recipe }) {
                         <img className="graphIcon" src={graphSym} onClick={()=>setShow(!show)}></img>
                         {
                         show?<div className="graphZ-index" id="x-btn">
-                        <p style={{fontWeight: "bold", float: "right", fontSize: "larger", color: "#04AA6D" /*backgroundColor: "#e0f4d0", width: "15px", height: "12px", paddingLeft: "5px", paddingBottom:"22px"*/}} onClick={()=>setShow(!show)}>  X</p>
+                        <p className="x-btn" style={{fontWeight: "bold", float: "right", fontSize: "larger", color: "#04AA6D"}} onClick={()=>setShow(!show)}>  X</p>
                             {/* show?<div style={{ height: "300px", width: "300px" }}> */}
                         <Pie data={chartData}/>
                         </div>:null

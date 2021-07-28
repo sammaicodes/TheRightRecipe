@@ -13,18 +13,18 @@ function Header({ getRandom }) {
     <>
       <div className="navbar">
 
-        <div>
+        <div className="hoverOver">
           <button type='button' onClick={onReload}>Home</button>
           {/* <p>Home</p> */}
         </div>
-        <div>
+        <div  className="hoverOver">
           <button type='button' >Favorites</button>
           {/* <p>Favorites</p> */}
         </div>
-        <div>
+        <div  className="hoverOver">
           <button type='button' onClick={getRandom}> Random Recipe</button>
         </div>
-        <div>
+        <div  className="hoverOver">
           <button>LogIn</button>
           {/* <p>LogIn</p> */}
         </div>
