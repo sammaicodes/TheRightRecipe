@@ -102,13 +102,14 @@ button{
   float: left;
   padding-left: 0px;
   align-items: baseline;
+  
 }
 .graphZ-index{
 height: 400px;
 width: 400px;
 position: absolute;
 z-index: 1;
-
+background-color: white;
 }
 /* #x-btn::after {
     content: 'x';
