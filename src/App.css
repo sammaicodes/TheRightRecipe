@@ -104,9 +104,16 @@ button{
   align-items: baseline;
 }
 .graphZ-index{
-height: 500px;
-width: 500px;
+height: 400px;
+width: 400px;
 position: absolute;
 z-index: 1;
+
 }
+/* #x-btn::after {
+    content: 'x';
+    color: #fff;
+    font-weight: 1000;
+    font-family: Arial, sans-serif;
+} */
 
