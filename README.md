@@ -44,11 +44,11 @@ _This project attempts to let the user create a list of ingredients and an API c
 | ----------- | ----------- | ----------- |
 | Fri. July 16 | See commit history - mostly read api documentation and tested it in postman | 8 hrs |
 | Thurs. July 22 | Implemented API & Axios | 2 hrs
-| Thurs. July 22 | Implemented Hooks | 1 hr
+| Thurs. July 22 | Implemented Hooks | 1hs hr
 | Thurs. July 22 | Added user input & clickable images | 1hr
 | Fri. July 23 | Worked on styling,added futures, and trouble shooting | 8hrs
 | Mon. July 26 | Added Pi charts functionality and lots of troubleshooting | 8hrs
-| Tue. July 27 | Lots of troubleshooting trying to map api data to pi chart and at the same time separate app into smaller components| 8hrs
+| Tue. July 27 | Lots of troubleshooting trying to map api data to pi chart and at the same time separate app into smaller components| 10 hrs
 
 
 

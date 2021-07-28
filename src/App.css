@@ -103,3 +103,11 @@ button{
   padding-left: 0px;
   align-items: baseline;
 }
+.graphZ-index{
+height: 300px;
+width: 300px;
+position: absolute;
+z-index: 1;
+
+}
+
