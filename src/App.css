@@ -97,12 +97,12 @@ button{
   margin-right: 70px;
   cursor: pointer;
   align-items: baseline;
+  
 }
 .icons{
   float: left;
   padding-left: 0px;
   align-items: baseline;
-  
 }
 .graphZ-index{
 height: 400px;
@@ -113,7 +113,7 @@ background-color: white;
 }
 .hoverOver:hover{
   background-color: #e0f4d0;
-  cursor: pointer;
+  
 }
 .x-btn:hover{
   background-color: #e0f4d0;

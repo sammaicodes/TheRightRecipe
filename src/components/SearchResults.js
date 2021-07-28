@@ -14,17 +14,21 @@ export default function SearchResults({ recipe }) {
 
     const chart = () => {
       setChartData({
-        labels: [`Energy [kcal]`, `FAT [g]`, `Carbs [g]`, `Sugar [g]`, `Protein [g]`],
+        labels: [`Energy [kcal]`, `FAT [g]`, `Carbs [g]`, `Sugar [g]`, `Protein [g]`, `Fiber [g]`, `Polyunsaturated [g]`, `Monounsaturated [g]`, `Saturated [g]`],
         datasets: [
           {
             label: 'Nutrient Content',
-            data: [recipe.recipe.totalNutrients.ENERC_KCAL.quantity, recipe.recipe.totalNutrients.FAT.quantity, recipe.recipe.totalNutrients.CHOCDF.quantity, recipe.recipe.totalNutrients.SUGAR.quantity, recipe.recipe.totalNutrients.PROCNT.quantity], // props.recipe.ENERC_KCAL.quantity
+            data: [recipe.recipe.totalNutrients.ENERC_KCAL.quantity, recipe.recipe.totalNutrients.FAT.quantity, recipe.recipe.totalNutrients.CHOCDF.quantity, recipe.recipe.totalNutrients.SUGAR.quantity, recipe.recipe.totalNutrients.PROCNT.quantity, recipe.recipe.totalNutrients.FIBTG.quantity, recipe.recipe.totalNutrients.FAPU.quantity, recipe.recipe.totalNutrients.FAMS.quantity, recipe.recipe.totalNutrients.FASAT.quantity], // props.recipe.ENERC_KCAL.quantity
             backgroundColor: [
               `#adcace`,
               `#FF0000`,
               `#FFFF00`,
               `#adca00`,
-              `#8c7dce`
+              `#8c7dce`,
+              `#ff0072`,
+              `#00fc00`,
+              `#0048af`, 
+              `#57f7f4`
             ],
             borderWidth: 4
           }
