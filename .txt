@@ -13,14 +13,14 @@ CRUD for user's favorites.  Allow the user to sign in and be able to store "its 
 What tools, frameworks, libraries, APIs, modules and/or other resources (whatever is specific to your track, and your language) will you use to create this MVP? List them all here. Be specific.
 
 Edamam API to generate the recipes based on the user's ingredients.
-Either JS/React
-HTML, CSS, Bootstrap
+JS/React
+HTML, CSS
 
 If you finish developing the minimum viable product (MVP) with time to spare, what will you work on next? Describe these features here: Be specific.
 
 Allow the user to choose to never show a certain recipe in case they didn't like it. 
-Have the app populate a list of the remaining igredients that the user still needs.
-Keep track of the user recipes history and generate a graph that shows the nutreints they have been consuming weekly.- maybe suggest recipes based on the nutrients they are lacking.
+Have the app populate a list of the remaining ingredients that the user still needs.
+Keep track of the user recipes history and generate a graph that shows the nutrients they have been consuming weekly.- maybe suggest recipes based on the nutrients they are lacking.
 The user can enter the zip code as well as the number of miles they are willing to shop at, and the app should calculate the cheapest store to buy at to accomplish their recipe. 
 
 What additional tools, frameworks, libraries, APIs, or other resources will these additional features require?

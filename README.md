@@ -13,12 +13,12 @@
 * _npm_
 * _node.js_
 * _create-react-app_
-* _www.draw.io_
 * _JSX_
 * _charts.js_
 * _Axios_
 * _React Hooks_
 * _Google fonts_
+* _Postman_
 
 
 ## Overview
@@ -36,7 +36,13 @@ _This project attempts to let the user create a list of ingredients and an API c
 ## Installation Instruction
 1.  
     * _Clone the repository with command `$ git clone gitHub-URL-repository`_
-    * _Navigate to the Project folder and run the command `$npm start`
+    * _Aquire an API ID and KEY from https://developer.edamam.com/_
+    * _Add an .env file to your top root level and add 
+    `REACT_APP_EDAMAM_API_ID=[YOUR API ID]
+    REACT_APP_EDAMAM_API_KEY=[YOUR API KEY]`
+    without the squared brackets_
+    * _Navigate to the Project folder and run the command `$npm install`_
+    * _In this same Project folder, run the command `$npm start`_
     * _Visit the app via the browser: 'localhost:3000/'_
 
 ## Project Time Tracking
@@ -45,15 +51,12 @@ _This project attempts to let the user create a list of ingredients and an API c
 | ----------- | ----------- | ----------- |
 | Fri. July 16 | See commit history - mostly read api documentation and tested it in postman | 8 hrs |
 | Thurs. July 22 | Implemented API & Axios | 2 hrs
-| Thurs. July 22 | Implemented Hooks | 1hs hr
+| Thurs. July 22 | Implemented Hooks | 1hs
 | Thurs. July 22 | Added user input & clickable images | 1hr
 | Fri. July 23 | Worked on styling,added futures, and trouble shooting | 8hrs
 | Mon. July 26 | Added Pi charts functionality and lots of troubleshooting | 8hrs
 | Tue. July 27 | Lots of troubleshooting trying to map api data to pi chart and at the same time separate app into smaller components| 10 hrs
-
-
-
-## Component Diagram
+| Wed. July 28 | Added more features to graph, read on modal, read on firebase, and cleaned up style | 8hrs
 
 
 ## Known Bugs
