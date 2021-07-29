@@ -18,6 +18,7 @@
 * _charts.js_
 * _Axios_
 * _React Hooks_
+* _Google fonts_
 
 
 ## Overview
